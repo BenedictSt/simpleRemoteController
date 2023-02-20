@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "cocoaasyncsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/robbiehanson/CocoaAsyncSocket",
+      "state" : {
+        "revision" : "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
+        "version" : "7.6.5"
+      }
+    },
+    {
+      "identity" : "osckit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/OSCKit",
+      "state" : {
+        "revision" : "c8b341ba1ccc9c39fe121b3abad87eb894d02671",
+        "version" : "0.4.3"
+      }
+    },
+    {
+      "identity" : "otcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/OTCore",
+      "state" : {
+        "revision" : "b58d5f2b3fc48f1abc9cd36aeef989c3b22edf66",
+        "version" : "1.4.9"
+      }
+    },
+    {
+      "identity" : "swiftascii",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/SwiftASCII",
+      "state" : {
+        "revision" : "81efd5731286be759e91096043be10384034ee57",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "swiftradix",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/SwiftRadix",
+      "state" : {
+        "revision" : "14bbd481ae1b226d9c01c22447f106b20853ba4f",
+        "version" : "1.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

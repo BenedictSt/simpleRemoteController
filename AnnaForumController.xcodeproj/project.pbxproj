@@ -11,6 +11,9 @@
 		8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC321E29A3FDC400216060 /* ContentView.swift */; };
 		8FCC322129A3FDC500216060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC322029A3FDC500216060 /* Assets.xcassets */; };
 		8FCC322529A3FDC500216060 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC322429A3FDC500216060 /* Preview Assets.xcassets */; };
+		8FCC322D29A3FFE900216060 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 8FCC322C29A3FFE900216060 /* CocoaAsyncSocket */; };
+		8FCC323029A4000100216060 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8FCC322F29A4000100216060 /* OSCKit */; };
+		8FCC323229A4000100216060 /* OSCKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8FCC323129A4000100216060 /* OSCKitCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC322D29A3FFE900216060 /* CocoaAsyncSocket in Frameworks */,
+				8FCC323029A4000100216060 /* OSCKit in Frameworks */,
+				8FCC323229A4000100216060 /* OSCKitCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,11 @@
 			dependencies = (
 			);
 			name = AnnaForumController;
+			packageProductDependencies = (
+				8FCC322C29A3FFE900216060 /* CocoaAsyncSocket */,
+				8FCC322F29A4000100216060 /* OSCKit */,
+				8FCC323129A4000100216060 /* OSCKitCore */,
+			);
 			productName = AnnaForumController;
 			productReference = 8FCC321929A3FDC400216060 /* AnnaForumController.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,10 @@
 				Base,
 			);
 			mainGroup = 8FCC321029A3FDC400216060;
+			packageReferences = (
+				8FCC322B29A3FFE900216060 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
+				8FCC322E29A4000100216060 /* XCRemoteSwiftPackageReference "OSCKit" */,
+			);
 			productRefGroup = 8FCC321A29A3FDC400216060 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +369,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FCC322B29A3FFE900216060 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robbiehanson/CocoaAsyncSocket";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		8FCC322E29A4000100216060 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FCC322C29A3FFE900216060 /* CocoaAsyncSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FCC322B29A3FFE900216060 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */;
+			productName = CocoaAsyncSocket;
+		};
+		8FCC322F29A4000100216060 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FCC322E29A4000100216060 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+		8FCC323129A4000100216060 /* OSCKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FCC322E29A4000100216060 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKitCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FCC321129A3FDC400216060 /* Project object */;
 }
