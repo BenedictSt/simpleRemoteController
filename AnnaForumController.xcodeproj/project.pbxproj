@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FCC321D29A3FDC400216060 /* AnnaForumControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC321C29A3FDC400216060 /* AnnaForumControllerApp.swift */; };
 		8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC321E29A3FDC400216060 /* ContentView.swift */; };
 		8FCC322129A3FDC500216060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC322029A3FDC500216060 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FCC321929A3FDC400216060 /* AnnaForumController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnaForumController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCC321C29A3FDC400216060 /* AnnaForumControllerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaForumControllerApp.swift; sourceTree = "<group>"; };
 		8FCC321E29A3FDC400216060 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8FCC322029A3FDC500216060 /* Assets.xcassets */,
 				8FCC322229A3FDC500216060 /* AnnaForumController.entitlements */,
 				8FCC322329A3FDC500216060 /* Preview Content */,
+				8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,
 				8FCC321D29A3FDC400216060 /* AnnaForumControllerApp.swift in Sources */,
 			);
