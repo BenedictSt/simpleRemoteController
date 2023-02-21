@@ -29,14 +29,42 @@ struct MuteButton: View {
 }
 
 
+struct Fader: View {
+	@Binding var value: Float
+
+	var body: some View {
+		Slider(value: $value, in: (0...1))
+			.frame(width: 200)
+	}
+}
+
+struct MicSettings: View {
+	let name: String
+	@State var active: Bool
+	@State var fader: Float
+
+	var body: some View {
+		HStack {
+			Text(name)
+				.font(.largeTitle)
+				.frame(width: 200, alignment: .leading)
+
+			Fader(value: $fader)
+			Spacer()
+			MuteButton(active: active)
+		}
+	}
+}
 
 
 
 struct SoundView: View {
 	var body: some View {
+
 		VStack {
-			MuteButton(active: true)
-			MuteButton(active: false)
+			MicSettings(name: "Mic 1 (blau)", active: true, fader: 0.0)
+			MicSettings(name: "Headset 1", active: false, fader: 0.5)
+			MicSettings(name: "Apple TV", active: false, fader: 0.5)
 		}.padding(49)
 	}
 }
