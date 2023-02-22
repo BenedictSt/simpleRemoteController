@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import OSCKit
+import OSCKitCore
 
 struct MuteButton: View {
 	let active: Bool

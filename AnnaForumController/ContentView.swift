@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import OSCKit
 let oscClient = OSCClient()
 let oscServer = OSCServer(port: 9000)
 
