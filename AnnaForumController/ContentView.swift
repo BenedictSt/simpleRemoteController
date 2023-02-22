@@ -8,6 +8,7 @@
 import SwiftUI
 import OSCKit
 let oscClient = OSCClient()
+let oscServer = OSCServer(port: 53001)
 
 struct ContentView: View {
 	var body: some View {
@@ -15,10 +16,13 @@ struct ContentView: View {
 			Image(systemName: "globe")
 				.imageScale(.large)
 				.foregroundColor(.accentColor)
+
+			SoundView()
+
 			Button(action: {
 
 //				DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-					let msg = OSCMessage("/a", values: ["a"])
+					let msg = OSCMessage("/version", values: [])
 						try? oscClient.send(msg, to: "10.0.0.37", port: 53000)
 						print("has send")
 
@@ -33,9 +37,14 @@ struct ContentView: View {
 
 
 			Button(action: {
+				print("start listening")
+				oscServer.setHandler { message, timeTag in
+							print(message, "with time tag:", timeTag)
+						}
 
+						try? oscServer.start()
 			}) {
-				Text("2")
+				Text("start listening")
 			}
 
 		Button(action: {
