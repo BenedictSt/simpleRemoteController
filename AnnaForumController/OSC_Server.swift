@@ -24,7 +24,7 @@ import CocoaAsyncSocket
 /// > With regards OSC Bundle Time Tag:
 /// >
 /// > An OSC server must have access to a representation of the correct current absolute time. OSC does not provide any mechanism for clock synchronization. If the time represented by the OSC Time Tag is before or equal to the current time, the OSC Server should invoke the methods immediately. Otherwise the OSC Time Tag represents a time in the future, and the OSC server must store the OSC Bundle until the specified time and then invoke the appropriate OSC Methods. When bundles contain other bundles, the OSC Time Tag of the enclosed bundle must be greater than or equal to the OSC Time Tag of the enclosing bundle.
-public final class OSCServer: NSObject {
+public final class OSCConnection: NSObject {
 	let udpServer = GCDAsyncUdpSocket()
 	let udpDelegate = OSCServerDelegate()
 	let receiveQueue: DispatchQueue
@@ -84,7 +84,7 @@ public final class OSCServer: NSObject {
 
 // MARK: - Lifecycle
 
-extension OSCServer {
+extension OSCConnection {
 	/// Bind the OSC server's local UDP port and begin listening for data.
 	public func start() throws {
 		stop()
@@ -102,7 +102,7 @@ extension OSCServer {
 
 // MARK: - Handle and Dispatch
 
-extension OSCServer {
+extension OSCConnection {
 	/// Handle incoming OSC data recursively.
 	func handle(
 		payload: any OSCObject,
@@ -172,9 +172,9 @@ extension OSCServer {
 
 /// Internal UDP receiver class so as to not expose `GCDAsyncUdpSocketDelegate` methods as public on `OSCServer`.
 class OSCServerDelegate: NSObject, GCDAsyncUdpSocketDelegate {
-	weak var oscServer: OSCServer?
+	weak var oscServer: OSCConnection?
 
-	init(oscServer: OSCServer? = nil) {
+	init(oscServer: OSCConnection? = nil) {
 		self.oscServer = oscServer
 	}
 
@@ -198,7 +198,7 @@ class OSCServerDelegate: NSObject, GCDAsyncUdpSocketDelegate {
 
 import Foundation
 
-extension OSCServer {
+extension OSCConnection {
 	/// Specifies the OSCServer's time tag behavior.
 	///
 	/// Time tag information is not altered; this simply dictates how the server reacts to time tag information.

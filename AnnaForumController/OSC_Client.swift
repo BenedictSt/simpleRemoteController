@@ -21,6 +21,18 @@ import CocoaAsyncSocket
 public final class OSCClient: NSObject {
 	private let udpClient = GCDAsyncUdpSocket()
 
+	init(port: UInt16 = 8000) {
+		print("init Client")
+		print(self.udpClient)
+		do {
+			try udpClient.enableReusePort(true)
+			try udpClient.bind(toPort: port)
+		} catch {
+			print("could not bind client to port: \(port)")
+			print(error)
+		}
+	}
+
 	deinit {
 		udpClient.close()
 	}
@@ -34,6 +46,26 @@ public final class OSCClient: NSObject {
 		let data = try oscObject.rawData()
 
 		udpClient.send(
+			data,
+			toHost: host,
+			port: port,
+			withTimeout: 1.0,
+			tag: 0
+		)
+	}
+}
+
+
+extension OSCConnection {
+	/// Send an OSC bundle or message ad-hoc to a recipient on the network.
+	public func send(
+		_ oscObject: any OSCObject,
+		to host: String,
+		port: UInt16 = 8000
+	) throws {
+		let data = try oscObject.rawData()
+
+		udpServer.send(
 			data,
 			toHost: host,
 			port: port,

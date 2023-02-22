@@ -56,7 +56,7 @@ struct MicSettings: View {
 			Button(action: {
 				active.toggle()
 				let msg = OSCMessage("/ch/\(channel)/mix/on", values: [active ? 1 : 0])
-					try? oscClient.send(msg, to: "127.0.0.1", port: 10023)
+					try? x32OSC.send(msg, to: "127.0.0.1", port: 10023)
 			}) {
 				MuteButton(active: active)
 			}.buttonStyle(.borderless)

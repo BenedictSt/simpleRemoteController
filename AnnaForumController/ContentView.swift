@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-let oscClient = OSCClient()
-let oscServer = OSCServer(port: 9000)
+
+let x32OSC = OSCConnection(port: 9000)
 
 struct ContentView: View {
 	var body: some View {
@@ -21,11 +21,11 @@ struct ContentView: View {
 			Button(action: {
 
 //				DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-					let msg = OSCMessage("/version", values: [])
-						try? oscClient.send(msg, to: "127.0.0.1", port: 10023)
+					let msg = OSCMessage("/info", values: [])
+						try? x32OSC.send(msg, to: "127.0.0.1", port: 10023)
 						print("has send")
 
-				print(oscClient.exposedBindings)
+				print(x32OSC.exposedBindings)
 
 //				try? oscClient.send(
 //					.message("/some/address/methodB", values: ["Test string", 123]),
@@ -39,11 +39,11 @@ struct ContentView: View {
 
 			Button(action: {
 				print("start listening")
-				oscServer.setHandler { message, timeTag in
+				x32OSC.setHandler { message, timeTag in
 							print(message, "with time tag:", timeTag)
 						}
 
-						try? oscServer.start()
+						try? x32OSC.start()
 			}) {
 				Text("start listening")
 			}
