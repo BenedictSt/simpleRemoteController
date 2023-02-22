@@ -8,7 +8,7 @@
 import SwiftUI
 import OSCKit
 let oscClient = OSCClient()
-let oscServer = OSCServer(port: 53001)
+let oscServer = OSCServer(port: 9000)
 
 struct ContentView: View {
 	var body: some View {
@@ -23,8 +23,10 @@ struct ContentView: View {
 
 //				DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
 					let msg = OSCMessage("/version", values: [])
-						try? oscClient.send(msg, to: "10.0.0.37", port: 53000)
+						try? oscClient.send(msg, to: "127.0.0.1", port: 10023)
 						print("has send")
+
+				print(oscClient.exposedBindings)
 
 //				try? oscClient.send(
 //					.message("/some/address/methodB", values: ["Test string", 123]),

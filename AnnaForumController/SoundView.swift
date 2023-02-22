@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSCKit
 
 struct MuteButton: View {
 	let active: Bool
@@ -40,6 +41,7 @@ struct Fader: View {
 
 struct MicSettings: View {
 	let name: String
+	let channel: String
 	@State var active: Bool
 	@State var fader: Float
 
@@ -51,7 +53,13 @@ struct MicSettings: View {
 
 			Fader(value: $fader)
 			Spacer()
-			MuteButton(active: active)
+			Button(action: {
+				active.toggle()
+				let msg = OSCMessage("/ch/\(channel)/mix/on", values: [active ? 1 : 0])
+					try? oscClient.send(msg, to: "127.0.0.1", port: 10023)
+			}) {
+				MuteButton(active: active)
+			}.buttonStyle(.borderless)
 		}
 	}
 }
@@ -62,9 +70,9 @@ struct SoundView: View {
 	var body: some View {
 
 		VStack {
-			MicSettings(name: "Mic 1 (blau)", active: true, fader: 0.0)
-			MicSettings(name: "Headset 1", active: false, fader: 0.5)
-			MicSettings(name: "Apple TV", active: false, fader: 0.5)
+			MicSettings(name: "Mic 1 (blau)", channel: "01", active: true, fader: 0.0)
+			MicSettings(name: "Headset 1", channel: "02", active: false, fader: 0.5)
+			MicSettings(name: "Apple TV", channel: "03", active: false, fader: 0.5)
 		}.padding(49)
 	}
 }
