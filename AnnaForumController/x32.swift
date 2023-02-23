@@ -61,6 +61,7 @@ class X32: ObservableObject{
 		func setMuted(_ m: Bool) {
 			let msg = OSCMessage(osc_on, values: [m ? 0 : 1])
 			x32.send(msg)
+			fetch()
 		}
 
 		func setFader(_ f: Float) {
@@ -70,6 +71,7 @@ class X32: ObservableObject{
 
 			let msg = OSCMessage(osc_fader, values: [f])
 			x32.send(msg)
+			fetch()
 		}
 	}
 
