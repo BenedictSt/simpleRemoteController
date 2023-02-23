@@ -17,9 +17,13 @@ class X32: ObservableObject{
 	class Channel {
 		let name: String
 		unowned let x32: X32
+
 		let id: String
-		private (set) var muted: Bool
-		private (set) var faderValue: Float
+		var osc_on: String { "/ch/\(id)/mix/on" }
+		var osc_fader: String { "/ch/\(id)/mix/fader" }
+
+		fileprivate (set) var muted: Bool
+		fileprivate (set) var faderValue: Float
 		var hash: Int {
 			var hasher = Hasher()
 			hasher.combine(id)
@@ -37,12 +41,12 @@ class X32: ObservableObject{
 		}
 
 		func fetch() {
-			x32.send(OSCMessage("/ch/\(id)/mix/on", values: []))
-			x32.send(OSCMessage("/ch/\(id)/mix/fader", values: []))
+			x32.send(OSCMessage(osc_on, values: []))
+			x32.send(OSCMessage(osc_fader, values: []))
 		}
 
 		func setMuted(_ m: Bool) {
-			let msg = OSCMessage("/ch/\(id)/mix/on", values: [muted ? 0 : 1])
+			let msg = OSCMessage(osc_on, values: [muted ? 0 : 1])
 			x32.send(msg)
 		}
 
@@ -51,7 +55,7 @@ class X32: ObservableObject{
 				print("error setting fader: out of bounds: \(f)")
 			}
 
-			let msg = OSCMessage("/ch/\(id)/mix/fader", values: [f])
+			let msg = OSCMessage(osc_fader, values: [f])
 			x32.send(msg)
 		}
 	}
@@ -78,6 +82,31 @@ class X32: ObservableObject{
 			Channel(x32: self, name: "Headset", id: "04"),
 			Channel(x32: self, name: "Apple TV", id: "15")
 		]
+
+		connection.setHandler(returnHandler)
+		try? connection.start()
+	}
+
+	func returnHandler(message: OSCMessage, timeTag: OSCTimeTag) {
+		do {
+			for channel in channels {
+				if message.addressPattern.matches(localAddress: channel.osc_on) {
+					let newValue = try message.values.masked(Bool?.self)
+					if let newValue {
+						channel.muted = !newValue
+					}
+				}
+
+				if message.addressPattern.matches(localAddress: channel.osc_fader) {
+					let newValue = try message.values.masked(Float?.self)
+					if let newValue {
+						channel.faderValue = newValue
+					}
+				}
+			}
+		} catch {
+			print("error handling oscMessage: \(message.descriptionPretty)")
+		}
 	}
 
 	func send(_ msg: OSCMessage) {
