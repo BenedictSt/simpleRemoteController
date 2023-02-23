@@ -57,8 +57,11 @@ struct MicSettings: View {
 				.frame(width: 200, alignment: .leading)
 
 			Fader(value: $fader)
+				.onSubmit {
+					channel.setFader(fader)
+				}
 				.onChange(of: fader, perform: { newValue in
-					channel.setFader(newValue)
+//					channel.setFader(newValue)
 				})
 			Spacer()
 			Button(action: {
@@ -86,6 +89,12 @@ struct SoundView: View {
 			}
 		}.padding(49)
 			.id(x32.updateId)
+			.onAppear {
+				x32.startBackgroundUpdates()
+			}
+			.onDisappear {
+				x32.stopBackgroundUpdates()
+			}
 	}
 }
 

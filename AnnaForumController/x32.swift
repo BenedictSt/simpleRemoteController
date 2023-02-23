@@ -13,6 +13,7 @@ enum ConnectionState {
 
 class X32: ObservableObject{
 	let connection: OSCConnection
+	var updateTimer: Timer?
 
 	class Channel: Hashable{
 		static func == (lhs: X32.Channel, rhs: X32.Channel) -> Bool {
@@ -100,8 +101,27 @@ class X32: ObservableObject{
 			print("start x32 listener")
 	}
 
+
+	func startBackgroundUpdates() {
+		if let _ = updateTimer {
+			return
+		}
+		updateTimer = Timer(timeInterval: 0.5, repeats: true, block: {_ in
+			self.fetch()
+		})
+		RunLoop.main.add(updateTimer!, forMode: .common)
+	}
+
+	func stopBackgroundUpdates() {
+		if let _ = updateTimer {
+			updateTimer?.invalidate()
+			updateTimer = nil
+		}
+	}
+
 	func returnHandler(message: OSCMessage, timeTag: OSCTimeTag) {
-		print("handle: \(message.descriptionPretty)")
+		let beforeHash = hash
+//		print("handle: \(message.descriptionPretty)")
 		do {
 			for channel in channels {
 				if message.addressPattern.matches(localAddress: channel.osc_on) {
@@ -121,19 +141,18 @@ class X32: ObservableObject{
 		} catch {
 			print("error handling oscMessage: \(message.descriptionPretty)")
 		}
-		updateId = UUID()
+		if beforeHash != hash {
+			updateId = UUID()
+		}
+
 	}
 
 	func send(_ msg: OSCMessage) {
-		try? connection.send(msg, to: "127.0.0.1", port: 10023)
+		try? connection.send(msg, to: "10.0.0.32", port: 10023)
 	}
 
 
 	func fetch() {
-		let beforeHash = hash
 		channels.forEach({$0.fetch()})
-		if beforeHash != hash {
-			updateId = UUID()
-		}
 	}
 }
