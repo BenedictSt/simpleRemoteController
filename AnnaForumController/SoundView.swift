@@ -40,23 +40,29 @@ struct Fader: View {
 }
 
 struct MicSettings: View {
-	let name: String
-	let channel: String
+	let channel: X32.Channel
 	@State var active: Bool
 	@State var fader: Float
 
+	init(channel: X32.Channel) {
+		self.channel = channel
+		self.active = !channel.muted
+		self.fader = channel.faderValue
+	}
+
 	var body: some View {
 		HStack {
-			Text(name)
+			Text(channel.name)
 				.font(.largeTitle)
 				.frame(width: 200, alignment: .leading)
 
 			Fader(value: $fader)
+				.onChange(of: fader, perform: { newValue in
+					channel.setFader(newValue)
+				})
 			Spacer()
 			Button(action: {
-				active.toggle()
-				let msg = OSCMessage("/ch/\(channel)/mix/on", values: [active ? 1 : 0])
-					try? x32OSC.send(msg, to: "127.0.0.1", port: 10023)
+				channel.setMuted(active)
 			}) {
 				MuteButton(active: active)
 			}.buttonStyle(.borderless)
@@ -67,13 +73,19 @@ struct MicSettings: View {
 
 
 struct SoundView: View {
+	@ObservedObject var x32 = X32()
 	var body: some View {
-
 		VStack {
-			MicSettings(name: "Mic 1 (blau)", channel: "01", active: true, fader: 0.0)
-			MicSettings(name: "Headset 1", channel: "02", active: false, fader: 0.5)
-			MicSettings(name: "Apple TV", channel: "03", active: false, fader: 0.5)
+			Button(action: {
+				x32.fetch()
+			}) {
+				Text("fetch")
+			}
+			ForEach(x32.channels, id: \.self) { channel in
+				MicSettings(channel: channel)
+			}
 		}.padding(49)
+			.id(x32.updateId)
 	}
 }
 

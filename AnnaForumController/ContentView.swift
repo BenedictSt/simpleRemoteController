@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let x32OSC = OSCConnection(port: 9000)
+let x32OSC = OSCConnection(port: 9001)
 
 struct ContentView: View {
 	var body: some View {

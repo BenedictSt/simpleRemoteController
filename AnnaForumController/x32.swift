@@ -14,7 +14,19 @@ enum ConnectionState {
 class X32: ObservableObject{
 	let connection: OSCConnection
 
-	class Channel {
+	class Channel: Hashable{
+		static func == (lhs: X32.Channel, rhs: X32.Channel) -> Bool {
+			lhs.id == rhs.id
+		}
+
+		func hash(into hasher: inout Hasher) {
+			hasher.combine(name)
+			hasher.combine(id)
+			hasher.combine(muted)
+			hasher.combine(faderValue)
+		}
+
+
 		let name: String
 		unowned let x32: X32
 
@@ -46,7 +58,7 @@ class X32: ObservableObject{
 		}
 
 		func setMuted(_ m: Bool) {
-			let msg = OSCMessage(osc_on, values: [muted ? 0 : 1])
+			let msg = OSCMessage(osc_on, values: [m ? 0 : 1])
 			x32.send(msg)
 		}
 
@@ -83,17 +95,19 @@ class X32: ObservableObject{
 			Channel(x32: self, name: "Apple TV", id: "15")
 		]
 
-		connection.setHandler(returnHandler)
-		try? connection.start()
+			connection.setHandler(returnHandler)
+			try? connection.start()
+			print("start x32 listener")
 	}
 
 	func returnHandler(message: OSCMessage, timeTag: OSCTimeTag) {
+		print("handle: \(message.descriptionPretty)")
 		do {
 			for channel in channels {
 				if message.addressPattern.matches(localAddress: channel.osc_on) {
-					let newValue = try message.values.masked(Bool?.self)
+					let newValue = try message.values.masked(Int?.self)
 					if let newValue {
-						channel.muted = !newValue
+						channel.muted = newValue == 0
 					}
 				}
 
@@ -107,10 +121,11 @@ class X32: ObservableObject{
 		} catch {
 			print("error handling oscMessage: \(message.descriptionPretty)")
 		}
+		updateId = UUID()
 	}
 
 	func send(_ msg: OSCMessage) {
-		try? x32OSC.send(msg, to: "127.0.0.1", port: 10023)
+		try? connection.send(msg, to: "127.0.0.1", port: 10023)
 	}
 
 
