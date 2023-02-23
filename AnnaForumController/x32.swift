@@ -37,7 +37,8 @@ class X32: ObservableObject{
 		}
 
 		func fetch() {
-			
+			x32.send(OSCMessage("/ch/\(id)/mix/on", values: []))
+			x32.send(OSCMessage("/ch/\(id)/mix/fader", values: []))
 		}
 
 		func setMuted(_ m: Bool) {
