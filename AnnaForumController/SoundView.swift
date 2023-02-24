@@ -32,11 +32,7 @@ struct MuteButton: View {
 
 struct Fader: View {
 	let channel: X32.Channel
-	@State var value: Float
-	init(channel: X32.Channel) {
-		self.channel = channel
-		self.value = channel.faderValue
-	}
+	@Binding var value: Float
 
 	var body: some View {
 		Slider(value: $value, in: (0...1)) { editing in
@@ -45,32 +41,45 @@ struct Fader: View {
 				channel.setFader(value)
 			}
 		}
-			.frame(width: 200)
+//			.frame(width: 200)
 	}
 }
 
 struct MicSettings: View {
 	let channel: X32.Channel
 	@State var active: Bool
+	@State var SliderValue: Float
 
 	init(channel: X32.Channel) {
 		self.channel = channel
 		self.active = !channel.muted
+		self.SliderValue = channel.faderValue
 	}
 
 	var body: some View {
-		HStack {
-			Text(channel.name)
-				.font(.largeTitle)
-				.frame(width: 200, alignment: .leading)
-
-			Fader(channel: channel)
-			Spacer()
-			Button(action: {
-				channel.setMuted(active)
-			}) {
-				MuteButton(active: active)
-			}.buttonStyle(.borderless)
+		VStack {
+			HStack {
+				Text(channel.name)
+								.font(.headline)
+//					.frame(width: 200, alignment: .leading)
+//					.background(.blue)
+				Spacer()
+				Button(action: {
+					channel.setMuted(active)
+				}) {
+					MuteButton(active: active)
+				}.buttonStyle(.borderless)
+			}
+//			.background(.green)
+			HStack {
+				Image(systemName: "speaker.wave.2")
+					.foregroundColor(.secondary)
+				Fader(channel: channel, value: $SliderValue)
+				Text("\(SliderValue.dbString)db")
+					.font(.headline)
+					.foregroundColor(.secondary)
+			}
+			Divider()
 		}
 	}
 }
@@ -98,5 +107,6 @@ struct SoundView: View {
 struct SoundView_Previews: PreviewProvider {
 	static var previews: some View {
 		SoundView()
+			.previewDevice("iPhone 14 Pro")
 	}
 }

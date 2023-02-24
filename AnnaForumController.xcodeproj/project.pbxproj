@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485A4E29A7D07900C7DE0E /* x32.swift */; };
+		8F95146629A943C300B2DF33 /* floatDbTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146529A943C300B2DF33 /* floatDbTable.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		8F485A4E29A7D07900C7DE0E /* x32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x32.swift; sourceTree = "<group>"; };
+		8F95146529A943C300B2DF33 /* floatDbTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floatDbTable.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				8FC817D429A69CB0004B4F8A /* OSC_Server.swift */,
 				8FC817D629A69CB8004B4F8A /* OSC_Client.swift */,
 				8F485A4E29A7D07900C7DE0E /* x32.swift */,
+				8F95146529A943C300B2DF33 /* floatDbTable.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */,
+				8F95146629A943C300B2DF33 /* floatDbTable.swift in Sources */,
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,

@@ -88,7 +88,7 @@ class X32: ObservableObject{
 
 
 	init() {
-		connection = OSCConnection(port: 9000)
+		connection = OSCConnection(port: 9000 + UInt16.random(in: 0...1000))
 		state = .disconnected
 		channels = []
 		channels = [
@@ -155,7 +155,7 @@ class X32: ObservableObject{
 	}
 
 	func send(_ msg: OSCMessage) {
-		try? connection.send(msg, to: "10.0.0.32", port: 10023)
+		try? connection.send(msg, to: "127.0.0.1", port: 10023)
 	}
 
 
