@@ -7,13 +7,45 @@
 
 import Foundation
 
-enum ConnectionState {
-	case established, connected, disconnected
-}
-
 class X32: ObservableObject{
 	let connection: OSCConnection
 	var updateTimer: Timer?
+
+	class Status: ObservableObject{
+		@Published var connected: Bool
+		@Published var dropped: Int
+		var received: [Int]
+		var send: [Int]
+
+		init() {
+			connected = false
+			dropped = 0
+			received = [0]
+			send = [0]
+		}
+
+
+		func tick() {
+			received.append(0)
+			send.append(0)
+			received = received.dropLast(received.count - 20)
+			send = send.dropLast(received.count - 20)
+			connected = received.dropFirst(received.count - 4).reduce(0, +) > 0
+		}
+
+		func shouldReceiveReply() {
+			if !send.isEmpty {
+				send[received.count - 1] += 1
+			}
+		}
+
+		func receivedReply() {
+			if !received.isEmpty {
+				received[received.count - 1] += 1
+			}
+		}
+
+	}
 
 	class Channel: Hashable{
 		static func == (lhs: X32.Channel, rhs: X32.Channel) -> Bool {
@@ -82,14 +114,13 @@ class X32: ObservableObject{
 	}
 
 	@Published var updateId = UUID()
+	@Published var status: Status = Status()
 
-	var state: ConnectionState
 	var channels: [Channel]
 
 
 	init() {
 		connection = OSCConnection(port: 9000 + UInt16.random(in: 0...1000))
-		state = .disconnected
 		channels = []
 		channels = [
 			Channel(x32: self, name: "Mic 1 (blau)", id: "01"),
