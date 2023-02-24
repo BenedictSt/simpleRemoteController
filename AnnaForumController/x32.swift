@@ -98,9 +98,9 @@ class X32: ObservableObject{
 			Channel(x32: self, name: "Apple TV", id: "15")
 		]
 
-			connection.setHandler(returnHandler)
-			try? connection.start()
-			print("start x32 listener")
+		connection.setHandler(returnHandler)
+		try? connection.start()
+		print("start x32 listener")
 	}
 
 
@@ -123,7 +123,7 @@ class X32: ObservableObject{
 
 	func returnHandler(message: OSCMessage, timeTag: OSCTimeTag) {
 		let beforeHash = hash
-//		print("handle: \(message.descriptionPretty)")
+		//		print("handle: \(message.descriptionPretty)")
 		do {
 			for channel in channels {
 				if message.addressPattern.matches(localAddress: channel.osc_on) {
@@ -146,7 +146,6 @@ class X32: ObservableObject{
 		if beforeHash != hash {
 			updateId = UUID()
 		}
-
 	}
 
 	func send(_ msg: OSCMessage) {

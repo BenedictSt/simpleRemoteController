@@ -81,11 +81,6 @@ struct SoundView: View {
 	@ObservedObject var x32 = X32()
 	var body: some View {
 		VStack {
-			Button(action: {
-				x32.fetch()
-			}) {
-				Text("fetch")
-			}
 			ForEach(x32.channels, id: \.self) { channel in
 				MicSettings(channel: channel)
 			}
