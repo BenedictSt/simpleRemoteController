@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "stripes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eneko/Stripes",
+      "state" : {
+        "revision" : "d533fd44b8043a3abbf523e733599173d6f98c11",
+        "version" : "0.2.0"
+      }
+    },
+    {
       "identity" : "swiftascii",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/orchetect/SwiftASCII",
