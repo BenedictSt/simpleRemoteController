@@ -31,10 +31,20 @@ struct MuteButton: View {
 
 
 struct Fader: View {
-	@Binding var value: Float
+	let channel: X32.Channel
+	@State var value: Float
+	init(channel: X32.Channel) {
+		self.channel = channel
+		self.value = channel.faderValue
+	}
 
 	var body: some View {
-		Slider(value: $value, in: (0...1))
+		Slider(value: $value, in: (0...1)) { editing in
+			if !editing {
+				print("set fader")
+				channel.setFader(value)
+			}
+		}
 			.frame(width: 200)
 	}
 }
@@ -42,12 +52,10 @@ struct Fader: View {
 struct MicSettings: View {
 	let channel: X32.Channel
 	@State var active: Bool
-	@State var fader: Float
 
 	init(channel: X32.Channel) {
 		self.channel = channel
 		self.active = !channel.muted
-		self.fader = channel.faderValue
 	}
 
 	var body: some View {
@@ -56,13 +64,7 @@ struct MicSettings: View {
 				.font(.largeTitle)
 				.frame(width: 200, alignment: .leading)
 
-			Fader(value: $fader)
-				.onSubmit {
-					channel.setFader(fader)
-				}
-				.onChange(of: fader, perform: { newValue in
-//					channel.setFader(newValue)
-				})
+			Fader(channel: channel)
 			Spacer()
 			Button(action: {
 				channel.setMuted(active)

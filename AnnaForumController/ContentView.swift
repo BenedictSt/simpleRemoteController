@@ -25,7 +25,7 @@ struct ContentView: View {
 						try? x32OSC.send(msg, to: "127.0.0.1", port: 10023)
 						print("has send")
 
-				print(x32OSC.exposedBindings)
+//				print(x32OSC.exposedBindings)
 
 //				try? oscClient.send(
 //					.message("/some/address/methodB", values: ["Test string", 123]),
