@@ -84,7 +84,7 @@ struct ChannelView: View {
 					.foregroundColor(.secondary)
 				Fader(channel: channel, value: $SliderValue)
 				Text("\(SliderValue.dbString)db")
-					.font(.headline)
+					.font(.headline.monospacedDigit())
 					.foregroundColor(.secondary)
 			}
 			Divider()
