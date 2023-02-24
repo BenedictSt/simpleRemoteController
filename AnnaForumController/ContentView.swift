@@ -26,7 +26,7 @@ struct ContentView: View {
 			SoundView()
 			Spacer()
 		}.sheet(isPresented: $showSettings) {
-			SettingsView()
+			SettingsView(showSettings: $showSettings)
 		}
 		//		.padding()
 	}
