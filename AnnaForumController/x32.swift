@@ -103,6 +103,12 @@ class X32: ObservableObject{
 		print("start x32 listener")
 	}
 
+	deinit {
+		self.connection.stop()
+		self.updateTimer?.invalidate()
+		self.updateTimer = nil
+	}
+
 
 	func startBackgroundUpdates() {
 		if let _ = updateTimer {
