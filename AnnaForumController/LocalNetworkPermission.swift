@@ -71,7 +71,7 @@ class LocalNetworkPermissionService {
 			}
 	}
 
-	private func ipv4AddressesOfEthernetLikeInterfaces() -> [String] {
+	func ipv4AddressesOfEthernetLikeInterfaces() -> [String] {
 		let interfaces = Set(namesOfEthernetLikeInterfaces())
 
 		print("Interfaces: \(interfaces)")

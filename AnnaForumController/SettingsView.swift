@@ -30,12 +30,33 @@ struct SettingsView: View {
 
 			ScrollView {
 				VStack (alignment: .leading){
+					Text("Dieses Gerät")
+						.font(.headline)
+						.padding(.top, 20)
+
+					let ipAddresses = LocalNetworkPermissionService().ipv4AddressesOfEthernetLikeInterfaces()
+
+					ForEach(ipAddresses, id: \.self) { ipAddress in
+						Text("IP: \(ipAddress)")
+							.font(.callout.monospaced())
+					}
+
+					Text("UDP-Port: 10000 (X32 reply)")
+						.font(.callout.monospaced())
+
+
+					Text("UDP-Port: 9000 (Lampy reply)")
+						.font(.callout.monospaced())
+
+
+
+
 					HStack {
 						Text("X32 Host-Adresse")
 							.font(.headline)
 							.padding(.top, 20)
 						Text("Port: 10023")
-							.font(.callout.monospacedDigit())
+							.font(.callout.monospaced())
 							.padding(.top, 20)
 					}
 					TextField("", text: $x32_hostAdress)
@@ -47,7 +68,7 @@ struct SettingsView: View {
 							.font(.headline)
 							.padding(.top, 20)
 						Text("Port: 8000")
-							.font(.callout.monospacedDigit())
+							.font(.callout.monospaced())
 							.padding(.top, 20)
 					}
 					TextField("", text: $lampy_hostAdress)
