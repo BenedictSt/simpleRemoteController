@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Stripes
 
 fileprivate struct MuteButton: View {
 	let active: Bool
@@ -16,8 +16,11 @@ fileprivate struct MuteButton: View {
 		let text = active ? "AN" : "AUS"
 
 		ZStack {
-			Rectangle()
-				.foregroundColor(color)
+			Stripes(config: StripesConfig(background: color,
+										  foreground: Color.white.opacity(0.2),
+										  degrees: active ? 45 : 135,
+										  barWidth: 5,
+										  barSpacing: 5))
 				.frame(width: 40, height: 40)
 				.cornerRadius(4)
 				.shadow(color: color, radius: 3)
@@ -25,6 +28,15 @@ fileprivate struct MuteButton: View {
 			Text(text)
 				.foregroundColor(.black)
 				.font(.headline)
+		}
+	}
+}
+
+struct MuteButton_Previews: PreviewProvider {
+	static var previews: some View {
+		VStack {
+			MuteButton(active: true)
+			MuteButton(active: false)
 		}
 	}
 }
