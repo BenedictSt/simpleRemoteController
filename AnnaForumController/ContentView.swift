@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+	@State var showSettings = false
 	var body: some View {
 		VStack(spacing: 30) {
-			Image(systemName: "globe")
-				.imageScale(.large)
-				.foregroundColor(.accentColor)
-
+			HStack {
+				Button(action: {
+					showSettings.toggle()
+				}) {
+					HStack {
+						Spacer()
+						Image(systemName: "wrench.and.screwdriver.fill")
+							.imageScale(.large)
+							.foregroundColor(.accentColor)
+					}
+				}
+			}.padding()
 			SoundView()
-
-			Button(action: {
-				LocalNetworkPermissionService().triggerDialog()
-			}) {
-				Text("access")
-			}
+			Spacer()
+		}.sheet(isPresented: $showSettings) {
+			SettingsView()
 		}
-		.padding()
+		//		.padding()
 	}
 }
 
@@ -31,3 +37,9 @@ struct ContentView_Previews: PreviewProvider {
 		ContentView()
 	}
 }
+
+//Button(action: {
+//	LocalNetworkPermissionService().triggerDialog()
+//}) {
+//	Text("access")
+//}
