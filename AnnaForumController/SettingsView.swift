@@ -75,6 +75,16 @@ struct SettingsView: View {
 						.textFieldStyle(.roundedBorder)
 						.font(.body.monospacedDigit())
 
+					Button(action: {
+						let application = UIApplication.shared
+						if let url = URL(string: UIApplication.openSettingsURLString), application.canOpenURL(url)    {
+							application.open(url, options: [:], completionHandler: nil)
+						}
+					}) {
+						Text("Geräte Einstellungen")
+					}
+
+
 
 					Spacer()
 				}
