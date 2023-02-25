@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SoundView: View {
-	@ObservedObject var x32 = X32()
+	@ObservedObject var x32: X32
 	var body: some View {
 		VStack {
 			PanicButton()
@@ -29,7 +29,7 @@ struct SoundView: View {
 
 struct SoundView_Previews: PreviewProvider {
 	static var previews: some View {
-		SoundView()
+		SoundView(x32: X32())
 			.previewDevice("iPhone 14 Pro")
 	}
 }

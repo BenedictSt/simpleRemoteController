@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
 	@State var showSettings = false
+
+	@ObservedObject var x32 = X32()
+
 	var body: some View {
 		VStack(spacing: 30) {
 			HStack {
@@ -23,7 +26,10 @@ struct ContentView: View {
 					}
 				}
 			}.padding()
-			SoundView()
+
+			ConnectionStatusView(x32: x32)
+
+			SoundView(x32: x32)
 			Spacer()
 		}.sheet(isPresented: $showSettings) {
 			SettingsView(showSettings: $showSettings)

@@ -13,6 +13,7 @@
 		8F95146B29A9462200B2DF33 /* Stripes in Frameworks */ = {isa = PBXBuildFile; productRef = 8F95146A29A9462200B2DF33 /* Stripes */; };
 		8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146C29A94AF900B2DF33 /* ChannelView.swift */; };
 		8F95146F29A94E7500B2DF33 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146E29A94E7500B2DF33 /* SettingsView.swift */; };
+		8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -32,6 +33,7 @@
 		8F95146729A9452500B2DF33 /* PanicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicButton.swift; sourceTree = "<group>"; };
 		8F95146C29A94AF900B2DF33 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		8F95146E29A94E7500B2DF33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusView.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				8F95146529A943C300B2DF33 /* floatDbTable.swift */,
 				8F95146C29A94AF900B2DF33 /* ChannelView.swift */,
 				8F95146E29A94E7500B2DF33 /* SettingsView.swift */,
+				8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				8F95146629A943C300B2DF33 /* floatDbTable.swift in Sources */,
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8F95146829A9452500B2DF33 /* PanicButton.swift in Sources */,
+				8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,

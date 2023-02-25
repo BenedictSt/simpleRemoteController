@@ -28,9 +28,10 @@ class X32: ObservableObject{
 		func tick() {
 			received.append(0)
 			send.append(0)
-			received = received.dropLast(received.count - 20)
-			send = send.dropLast(received.count - 20)
-			connected = received.dropFirst(received.count - 4).reduce(0, +) > 0
+			received = Array(received.dropFirst(max(0, received.count - 20)))
+			send = Array(send.dropFirst(max(0, send.count - 20)))
+			connected = received.dropFirst(max(0, received.count - 4)).reduce(0, +) > 0
+			dropped = max(0, send.reduce(0, +) - received.reduce(0, +))
 		}
 
 		func shouldReceiveReply() {
@@ -88,6 +89,8 @@ class X32: ObservableObject{
 		func fetch() {
 			x32.send(OSCMessage(osc_on, values: []))
 			x32.send(OSCMessage(osc_fader, values: []))
+			x32.status.shouldReceiveReply()
+			x32.status.shouldReceiveReply()
 		}
 
 		func setMuted(_ m: Bool) {
@@ -114,7 +117,7 @@ class X32: ObservableObject{
 	}
 
 	@Published var updateId = UUID()
-	@Published var status: Status = Status()
+	let status: Status = Status()
 
 	var channels: [Channel]
 
@@ -160,6 +163,7 @@ class X32: ObservableObject{
 
 	func returnHandler(message: OSCMessage, timeTag: OSCTimeTag) {
 		let beforeHash = hash
+		status.receivedReply()
 		//		print("handle: \(message.descriptionPretty)")
 		do {
 			for channel in channels {
@@ -191,6 +195,7 @@ class X32: ObservableObject{
 
 
 	func fetch() {
+		status.tick()
 		channels.forEach({$0.fetch()})
 	}
 }
