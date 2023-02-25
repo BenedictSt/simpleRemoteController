@@ -12,6 +12,8 @@ class X32: ObservableObject{
 	var updateTimer: Timer?
 
 	class Status: ObservableObject{
+		static let keepTicks = 10
+
 		@Published var connected: Bool
 		@Published var dropped: Int
 		var received: [Int]
@@ -28,8 +30,8 @@ class X32: ObservableObject{
 		func tick() {
 			received.append(0)
 			send.append(0)
-			received = Array(received.dropFirst(max(0, received.count - 20)))
-			send = Array(send.dropFirst(max(0, send.count - 20)))
+			received = Array(received.dropFirst(max(0, received.count - Status.keepTicks)))
+			send = Array(send.dropFirst(max(0, send.count - Status.keepTicks)))
 			connected = received.dropFirst(max(0, received.count - 4)).reduce(0, +) > 0
 			dropped = max(0, send.reduce(0, +) - received.reduce(0, +))
 		}

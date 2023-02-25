@@ -25,13 +25,15 @@ struct ContentView: View {
 							.foregroundColor(.accentColor)
 					}
 				}
-			}.padding()
+			}
 
 			ConnectionStatusView(x32: x32)
 
 			SoundView(x32: x32)
 			Spacer()
-		}.sheet(isPresented: $showSettings) {
+		}
+		.padding()
+		.sheet(isPresented: $showSettings) {
 			SettingsView(showSettings: $showSettings)
 		}
 		//		.padding()
