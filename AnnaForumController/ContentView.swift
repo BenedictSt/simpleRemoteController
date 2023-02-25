@@ -37,6 +37,7 @@ struct ContentView: View {
 			}
 
 			ConnectionStatusView(x32: x32)
+				.padding()
 
 			SoundView(x32: x32)
 				.disabled(!status.connected)
