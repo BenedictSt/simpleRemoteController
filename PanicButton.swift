@@ -9,9 +9,11 @@ import SwiftUI
 import Stripes
 
 struct PanicButton: View {
+	let x32: X32
+
 	var body: some View {
 		Button(action: {
-
+			x32.channels.forEach({$0.setMuted(true)})
 		}) {
 			HStack {
 				Spacer()
@@ -39,7 +41,7 @@ struct PanicButton: View {
 
 struct PanicButton_Previews: PreviewProvider {
 	static var previews: some View {
-		PanicButton()
+		PanicButton(x32: X32())
 			.previewDevice("iPhone 14 Pro")
 	}
 }

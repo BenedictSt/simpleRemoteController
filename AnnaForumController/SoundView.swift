@@ -11,7 +11,7 @@ struct SoundView: View {
 	@ObservedObject var x32: X32
 	var body: some View {
 		VStack {
-			PanicButton()
+			PanicButton(x32: x32)
 				.padding(.bottom, 20)
 			ForEach(x32.channels, id: \.self) { channel in
 				ChannelView(channel: channel)
