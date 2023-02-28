@@ -39,10 +39,11 @@ struct ContentView: View {
 			ConnectionStatusView(x32: x32)
 				.padding(.horizontal)
 
-			SoundView(x32: x32)
+			LightView(active: true, SliderValue: 0.75)
+				.padding()
 				.disabled(!status.connected)
 				.overlay {
-					if !status.connected {
+					if false {
 						ZStack {
 							Stripes(config: StripesConfig(background: .black,
 														  foreground: Color.white.opacity(0.2),
@@ -62,11 +63,10 @@ struct ContentView: View {
 					}
 				}
 
-			LightView(active: true, SliderValue: 0.75)
-				.padding()
+			SoundView(x32: x32)
 				.disabled(!status.connected)
 				.overlay {
-					if false {
+					if !status.connected {
 						ZStack {
 							Stripes(config: StripesConfig(background: .black,
 														  foreground: Color.white.opacity(0.2),
