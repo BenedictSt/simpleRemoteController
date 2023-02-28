@@ -18,7 +18,7 @@ struct PanicButton: View {
 				Image(systemName: "exclamationmark")
 					.font(.title2.bold())
 					.foregroundColor(.black)
-				Text("Not Aus")
+				Text("Alles Aus")
 					.font(.title2.bold())
 					.foregroundColor(.black)
 				Image(systemName: "exclamationmark")
