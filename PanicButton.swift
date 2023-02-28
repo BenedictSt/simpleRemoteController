@@ -16,18 +16,18 @@ struct PanicButton: View {
 			HStack {
 				Spacer()
 				Image(systemName: "exclamationmark")
-					.font(.title.bold())
+					.font(.title2.bold())
 					.foregroundColor(.black)
 				Text("Not Aus")
-					.font(.title.bold())
+					.font(.title2.bold())
 					.foregroundColor(.black)
 				Image(systemName: "exclamationmark")
-					.font(.title.bold())
+					.font(.title2.bold())
 					.foregroundColor(.black)
 				Spacer()
 			}
 		}
-		.frame(height: 60)
+		.frame(height: 50)
 		.background(Stripes(config: StripesConfig(background: .yellow,
 												  foreground: Color.white.opacity(0.4), degrees: 45,
 			  barWidth: 10, barSpacing: 10)))

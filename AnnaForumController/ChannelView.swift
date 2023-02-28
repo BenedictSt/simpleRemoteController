@@ -68,7 +68,7 @@ struct ChannelView: View {
 	}
 
 	var body: some View {
-		VStack {
+		VStack(spacing: 5){
 			HStack {
 				Text(channel.name)
 					.font(.title2.weight(.heavy))

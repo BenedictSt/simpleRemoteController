@@ -13,7 +13,7 @@ struct LightView: View {
 	@State var SliderValue: Float
 
 	var body: some View {
-		VStack {
+		VStack(spacing: 5){
 			HStack {
 				Text("Scheinwerfer")
 					.font(.title2.weight(.heavy))
