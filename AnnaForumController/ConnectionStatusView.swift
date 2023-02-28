@@ -44,7 +44,8 @@ fileprivate struct SingleStatusView: View {
 			}
 			Spacer()
 		}
-		.padding()
+		.padding(.horizontal, 20)
+		.padding(.vertical, 7)
 		.background(Stripes(config: StripesConfig(background: color,
 												  foreground: Color.white.opacity(0.2),
 										 degrees: 45,
