@@ -11,7 +11,16 @@ import SwiftUI
 struct AnnaForumControllerApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			if UIDevice.current.userInterfaceIdiom == .phone {
+				ContentView()
+			} else {
+				GeometryReader { reader in
+					HStack {
+						ContentView()
+							.frame(width: reader.size.width / 3)
+					}
+				}
+			}
 		}
 	}
 }
