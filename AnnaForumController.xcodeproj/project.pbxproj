@@ -38,6 +38,7 @@
 		8F95146C29A94AF900B2DF33 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		8F95146E29A94E7500B2DF33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusView.swift; sourceTree = "<group>"; };
+		8FA64D0E29AFAD12004CE481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		8FCC321B29A3FDC400216060 /* AnnaForumController */ = {
 			isa = PBXGroup;
 			children = (
+				8FA64D0E29AFAD12004CE481 /* Info.plist */,
 				8FCC321C29A3FDC400216060 /* AnnaForumControllerApp.swift */,
 				8FCC321E29A3FDC400216060 /* ContentView.swift */,
 				8FCC322029A3FDC500216060 /* Assets.xcassets */,
@@ -336,6 +338,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnnaForumController/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -374,6 +377,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnnaForumController/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
