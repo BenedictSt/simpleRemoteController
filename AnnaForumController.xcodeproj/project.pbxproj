@@ -23,6 +23,7 @@
 		8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1829AFE39A004CE481 /* CueControlView.swift */; };
 		8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1B29AFE5EB004CE481 /* CueListView.swift */; };
 		8FA64D1E29AFE831004CE481 /* CueControlTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */; };
+		8FA64D2029AFEEFF004CE481 /* CueEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -53,6 +54,7 @@
 		8FA64D1829AFE39A004CE481 /* CueControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueControlView.swift; sourceTree = "<group>"; };
 		8FA64D1B29AFE5EB004CE481 /* CueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueListView.swift; sourceTree = "<group>"; };
 		8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueControlTopBar.swift; sourceTree = "<group>"; };
+		8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueEditView.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				8FA64D1829AFE39A004CE481 /* CueControlView.swift */,
 				8FA64D1B29AFE5EB004CE481 /* CueListView.swift */,
 				8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */,
+				8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */,
 			);
 			path = CueControl;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8FA64D1E29AFE831004CE481 /* CueControlTopBar.swift in Sources */,
 				8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */,
 				8FCC321D29A3FDC400216060 /* AnnaForumControllerApp.swift in Sources */,
+				8FA64D2029AFEEFF004CE481 /* CueEditView.swift in Sources */,
 				8F95146F29A94E7500B2DF33 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

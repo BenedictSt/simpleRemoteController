@@ -15,16 +15,22 @@ let currentCueConfig = CueConfig()
 
 @main
 struct AnnaForumControllerApp: App {
+	@State var editCueConfig = false
+
 	var body: some Scene {
 		WindowGroup {
 			if UIDevice.current.userInterfaceIdiom == .phone {
 				ContentView()
 			} else {
 				GeometryReader { reader in
-					HStack {
-						ContentView()
-							.frame(width: reader.size.width / 3)
-						CueControlView()
+					if editCueConfig {
+						CueEditView(editCueConfig: $editCueConfig)
+					} else {
+						HStack {
+							ContentView()
+								.frame(width: reader.size.width / 3)
+							CueControlView(editCueConfig: $editCueConfig)
+						}
 					}
 				}
 			}

@@ -18,22 +18,24 @@ extension Date {
 }
 
 struct CueControlTopBar: View {
-
+	@Binding var editCueConfig: Bool
 	@State var isTimerRunning = false
 	@State private var uhrzeit = "00:00"
 	let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 	var body: some View {
-		Text(uhrzeit)
-			.font(.body.monospacedDigit())
-			.onReceive(timer) { _ in
-				uhrzeit = Date().formatted("dd.MMM yy, HH:mm:ss")
-			}
-	}
-}
+		HStack {
+			Text(uhrzeit)
+				.font(.body.monospacedDigit())
+				.onReceive(timer) { _ in
+					uhrzeit = Date().formatted("dd.MMM yy, HH:mm:ss")
+				}
 
-struct CueControlTopBar_Previews: PreviewProvider {
-	static var previews: some View {
-		CueControlTopBar()
+			Button(action: {
+				editCueConfig.toggle()
+			}) {
+				Text("Bearbeiten")
+			}
+		}
 	}
 }
