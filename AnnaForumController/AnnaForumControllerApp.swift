@@ -24,6 +24,7 @@ struct AnnaForumControllerApp: App {
 					HStack {
 						ContentView()
 							.frame(width: reader.size.width / 3)
+						CueControlView()
 					}
 				}
 			}

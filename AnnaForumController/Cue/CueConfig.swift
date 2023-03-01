@@ -32,7 +32,7 @@ protocol CueItem {
 
 class CueConfig: ObservableObject{
 	var cues: [any CueItem] = [Cue_Logo()]
-	var index: Int = 0
+	@Published var index: Int = 0
 }
 
 struct CueConfigWrapper {
