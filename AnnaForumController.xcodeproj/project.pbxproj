@@ -21,6 +21,7 @@
 		8FA64D1529AFE1B9004CE481 /* ExternalDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */; };
 		8FA64D1729AFE26A004CE481 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1629AFE26A004CE481 /* Extensions.swift */; };
 		8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1829AFE39A004CE481 /* CueControlView.swift */; };
+		8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1B29AFE5EB004CE481 /* CueListView.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -49,6 +50,7 @@
 		8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayView.swift; sourceTree = "<group>"; };
 		8FA64D1629AFE26A004CE481 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8FA64D1829AFE39A004CE481 /* CueControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueControlView.swift; sourceTree = "<group>"; };
+		8FA64D1B29AFE5EB004CE481 /* CueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueListView.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8FA64D1829AFE39A004CE481 /* CueControlView.swift */,
+				8FA64D1B29AFE5EB004CE481 /* CueListView.swift */,
 			);
 			path = CueControl;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,
 				8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */,
+				8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,
 				8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,

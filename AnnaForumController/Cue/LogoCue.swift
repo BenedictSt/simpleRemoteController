@@ -17,6 +17,16 @@ fileprivate struct Cue_Logo_View: View {
 }
 
 class Cue_Logo: CueItem {
+	static func == (lhs: Cue_Logo, rhs: Cue_Logo) -> Bool {
+		lhs.id == rhs.id
+	}
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(id)
+	}
+
+
+	let id: UUID = UUID()
 	var name: String
 	let type: CueType = .logo
 
