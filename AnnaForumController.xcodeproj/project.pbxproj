@@ -16,6 +16,8 @@
 		8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146C29A94AF900B2DF33 /* ChannelView.swift */; };
 		8F95146F29A94E7500B2DF33 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146E29A94E7500B2DF33 /* SettingsView.swift */; };
 		8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */; };
+		8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D0F29AFB960004CE481 /* CueConfig.swift */; };
+		8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1229AFBBA2004CE481 /* LogoCue.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -39,6 +41,8 @@
 		8F95146E29A94E7500B2DF33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusView.swift; sourceTree = "<group>"; };
 		8FA64D0E29AFAD12004CE481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA64D0F29AFB960004CE481 /* CueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueConfig.swift; sourceTree = "<group>"; };
+		8FA64D1229AFBBA2004CE481 /* LogoCue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCue.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FA64D1129AFBB8E004CE481 /* Cue */ = {
+			isa = PBXGroup;
+			children = (
+				8FA64D0F29AFB960004CE481 /* CueConfig.swift */,
+				8FA64D1229AFBBA2004CE481 /* LogoCue.swift */,
+			);
+			path = Cue;
+			sourceTree = "<group>";
+		};
 		8FCC321029A3FDC400216060 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 		8FCC321B29A3FDC400216060 /* AnnaForumController */ = {
 			isa = PBXGroup;
 			children = (
+				8FA64D1129AFBB8E004CE481 /* Cue */,
 				8FA64D0E29AFAD12004CE481 /* Info.plist */,
 				8FCC321C29A3FDC400216060 /* AnnaForumControllerApp.swift */,
 				8FCC321E29A3FDC400216060 /* ContentView.swift */,
@@ -202,9 +216,11 @@
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8F0E469D29AE8B700079271F /* LightView.swift in Sources */,
 				8F95146829A9452500B2DF33 /* PanicButton.swift in Sources */,
+				8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */,
 				8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,
+				8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,
 				8FB37F2229A428C10028B248 /* SoundView.swift in Sources */,
 				8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */,
@@ -349,7 +365,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -388,7 +404,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
