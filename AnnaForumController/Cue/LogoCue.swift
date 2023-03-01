@@ -38,7 +38,7 @@ class Cue_Logo: CueItem {
 		fatalError("todo")
 	}
 
-	var view: any View {
-		Cue_Logo_View(data: self)
+	var view: AnyView {
+		AnyView(Cue_Logo_View(data: self))
 	}
 }

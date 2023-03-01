@@ -11,7 +11,7 @@ class TestObserver: ObservableObject {
 	@Published var x: UUID = UUID()
 }
 
-let ob = TestObserver()
+let currentCueConfig = CueConfig()
 
 @main
 struct AnnaForumControllerApp: App {
@@ -31,13 +31,6 @@ struct AnnaForumControllerApp: App {
 	}
 }
 
-struct testView: View {
-	@ObservedObject var o = ob
-
-	var body: some View {
-		Text("\(o.x)")
-	}
-}
 
 class ExtSceneDelegate: UIResponder, UIWindowSceneDelegate {
 	var window: UIWindow?
@@ -63,7 +56,9 @@ class ExtSceneDelegate: UIResponder, UIWindowSceneDelegate {
 			window.addSubview(view)
 
 //			let swiftUIView = UnverbundenOverlay()
-			let swiftUIView = testView().frame(width: windowScene.screen.bounds.width, height: windowScene.screen.bounds.height).offset(x: windowScene.screen.bounds.width / 2, y: windowScene.screen.bounds.height / 2)
+			let swiftUIView = ExternalDisplayView()
+				.frame(width: windowScene.screen.bounds.width, height: windowScene.screen.bounds.height)
+				.offset(x: windowScene.screen.bounds.width / 2, y: windowScene.screen.bounds.height / 2)
 			let viewCtrl = UIHostingController(rootView: swiftUIView)
 //			window.rootViewController?.addChild(viewCtrl)
 //			viewCtrl.didMove(toParent: window.rootViewController)

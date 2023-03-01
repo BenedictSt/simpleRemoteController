@@ -14,7 +14,6 @@ struct PanicButton: View {
 	var body: some View {
 		Button(action: {
 			x32.channels.forEach({$0.setMuted(true)})
-			ob.x = UUID()
 		}) {
 			HStack {
 				Spacer()

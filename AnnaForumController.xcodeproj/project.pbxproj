@@ -18,6 +18,8 @@
 		8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */; };
 		8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D0F29AFB960004CE481 /* CueConfig.swift */; };
 		8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1229AFBBA2004CE481 /* LogoCue.swift */; };
+		8FA64D1529AFE1B9004CE481 /* ExternalDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */; };
+		8FA64D1729AFE26A004CE481 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1629AFE26A004CE481 /* Extensions.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -43,6 +45,8 @@
 		8FA64D0E29AFAD12004CE481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FA64D0F29AFB960004CE481 /* CueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueConfig.swift; sourceTree = "<group>"; };
 		8FA64D1229AFBBA2004CE481 /* LogoCue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCue.swift; sourceTree = "<group>"; };
+		8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayView.swift; sourceTree = "<group>"; };
+		8FA64D1629AFE26A004CE481 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */,
 				8F0E469C29AE8B700079271F /* LightView.swift */,
 				8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */,
+				8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */,
+				8FA64D1629AFE26A004CE481 /* Extensions.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -211,8 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */,
+				8FA64D1729AFE26A004CE481 /* Extensions.swift in Sources */,
 				8F0E469F29AE96A20079271F /* UnverbundenOverlay.swift in Sources */,
 				8F95146629A943C300B2DF33 /* floatDbTable.swift in Sources */,
+				8FA64D1529AFE1B9004CE481 /* ExternalDisplayView.swift in Sources */,
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8F0E469D29AE8B700079271F /* LightView.swift in Sources */,
 				8F95146829A9452500B2DF33 /* PanicButton.swift in Sources */,

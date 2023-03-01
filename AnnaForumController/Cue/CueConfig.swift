@@ -27,11 +27,12 @@ protocol CueItem {
 	init()
 	var wrapper: CueItemWrapper { get }
 
-	var view: any View { get }
+	var view: AnyView { get }
 }
 
-struct CueConfig {
-	var cues: [any CueItem]
+class CueConfig: ObservableObject{
+	var cues: [any CueItem] = [Cue_Logo()]
+	var index: Int = 0
 }
 
 struct CueConfigWrapper {
