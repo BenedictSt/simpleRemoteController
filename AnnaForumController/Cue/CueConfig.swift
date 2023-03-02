@@ -28,7 +28,8 @@ protocol CueItem: Hashable {
 	init()
 	var wrapper: CueItemWrapper { get }
 
-	var view: AnyView { get }
+	var external_view: AnyView { get }
+	var edit_view: AnyView { get }
 }
 
 class CueConfig: ObservableObject{

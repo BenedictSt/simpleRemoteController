@@ -9,7 +9,26 @@ import SwiftUI
 
 struct CueEditView: View {
 	@Binding var editCueConfig: Bool
+
+	@ObservedObject var cueConfig = currentCueConfig
+
 	var body: some View {
-		Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		VStack {
+			HStack {
+				Spacer()
+				Button(action: {
+					editCueConfig.toggle()
+				}) {
+					Text("Speichern")
+				}
+			}
+
+			HStack {
+				CueListView()
+				let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
+				cueEditView
+					.frame(width: 400, height: 200)
+			}
+		}
 	}
 }

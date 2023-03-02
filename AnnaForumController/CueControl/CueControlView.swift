@@ -20,12 +20,12 @@ struct CueControlView: View {
 				VStack {
 
 					Text("Beamer:")
-					let cueView = cueConfig.cues[safe: cueConfig.index]?.view ?? AnyView(Color.gray)
+					let cueView = cueConfig.cues[safe: cueConfig.index]?.external_view ?? AnyView(Color.gray)
 					cueView
 						.frame(width: 400, height: 200)
 
 					Text("nächste:")
-					let nextView = cueConfig.cues[safe: cueConfig.index + 1]?.view ?? AnyView(Color.gray)
+					let nextView = cueConfig.cues[safe: cueConfig.index + 1]?.external_view ?? AnyView(Color.gray)
 					nextView
 						.frame(width: 400, height: 200)
 

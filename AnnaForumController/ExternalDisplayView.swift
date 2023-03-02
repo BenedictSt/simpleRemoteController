@@ -13,7 +13,7 @@ struct ExternalDisplayView: View {
 
 	var body: some View {
 		if let cue = cueConfig.cues[safe: cueConfig.index] {
-			cue.view
+			cue.external_view
 		}
 	}
 }
