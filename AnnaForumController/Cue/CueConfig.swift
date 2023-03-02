@@ -33,7 +33,7 @@ protocol CueItem: Hashable, ObservableObject {
 }
 
 class CueConfig: ObservableObject{
-	var cues: [any CueItem] = [Cue_Logo()]
+	@Published var cues: [any CueItem] = [Cue_Logo(), Cue_Logo(), Cue_Logo()]
 	@Published var index: Int = 0
 }
 

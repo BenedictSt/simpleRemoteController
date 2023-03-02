@@ -28,6 +28,7 @@ struct CueEditView: View {
 				let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
 				cueEditView
 			}
+			.id(cueConfig.index)
 		}
 	}
 }
