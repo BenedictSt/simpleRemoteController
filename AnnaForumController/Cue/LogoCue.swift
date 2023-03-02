@@ -98,6 +98,7 @@ fileprivate struct Cue_Logo_View: View {
 				VStack {
 					Image("logo")
 						.resizable()
+						.foregroundColor(.white)
 						.scaledToFit()
 						.frame(width: reader.size.width * 0.8, height: reader.size.height * 0.8)
 
@@ -108,6 +109,7 @@ fileprivate struct Cue_Logo_View: View {
 							if data.zeigeDatum {
 								Text(Date().formatted("dd.MMM.YYYY"))
 									.font(.system(size: 500))
+									.foregroundColor(.white)
 									.frame(height: reader.size.height * 0.1)
 									.minimumScaleFactor(0.01)
 							}
@@ -116,6 +118,7 @@ fileprivate struct Cue_Logo_View: View {
 								Text(uhrzeit)
 									//.font(.largeTitle)
 									.font(.system(size: 500))
+									.foregroundColor(.white)
 									.frame(height: reader.size.height * 0.1)
 									.minimumScaleFactor(0.01)
 									.onReceive(timer) { _ in
