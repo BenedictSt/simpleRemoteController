@@ -13,22 +13,26 @@ struct CueEditView: View {
 	@ObservedObject var cueConfig = currentCueConfig
 
 	var body: some View {
-		VStack {
-			HStack {
-				Spacer()
-				Button(action: {
-					editCueConfig.toggle()
-				}) {
-					Text("Speichern")
+		GeometryReader { reader in
+			VStack {
+				HStack {
+					Spacer()
+					Button(action: {
+						editCueConfig.toggle()
+					}) {
+						Text("Speichern")
+					}
 				}
-			}
 
-			HStack {
-				CueListView()
-				let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
-				cueEditView
+				HStack {
+					CueListView()
+						.frame(width: reader.size.width * 0.3)
+						.padding()
+					let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
+					cueEditView
+				}
+				.id(cueConfig.index)
 			}
-			.id(cueConfig.index)
 		}
 	}
 }
