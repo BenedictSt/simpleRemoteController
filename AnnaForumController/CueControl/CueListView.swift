@@ -30,9 +30,9 @@ struct CueListView: View {
 
 								cueView
 									.frame(width: 320, height: 160)
+									.cornerRadius(20)
 									.scaleEffect(0.25)
 									.frame(width: 80, height: 45)
-									.cornerRadius(10)
 									.padding(.leading, 5)
 
 								Text(cueConfig.cues[cueIndex].name)
