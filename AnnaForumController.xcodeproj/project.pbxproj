@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0C29FE29B105880094B5A6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C29FD29B105880094B5A6 /* Options.swift */; };
 		8F0E469D29AE8B700079271F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469C29AE8B700079271F /* LightView.swift */; };
 		8F0E469F29AE96A20079271F /* UnverbundenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */; };
 		8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485A4E29A7D07900C7DE0E /* x32.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F0C29FD29B105880094B5A6 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		8F0E469C29AE8B700079271F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverbundenOverlay.swift; sourceTree = "<group>"; };
 		8F485A4E29A7D07900C7DE0E /* x32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x32.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */,
 				8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */,
 				8FA64D1629AFE26A004CE481 /* Extensions.swift */,
+				8F0C29FD29B105880094B5A6 /* Options.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */,
 				8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,
+				8F0C29FE29B105880094B5A6 /* Options.swift in Sources */,
 				8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,
 				8FB37F2229A428C10028B248 /* SoundView.swift in Sources */,

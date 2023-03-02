@@ -11,8 +11,49 @@ import SwiftUI
 fileprivate struct Cue_Logo_View: View {
 	let data: Cue_Logo
 
+	@State private var uhrzeit = Date().formatted("HH:mm")
+	let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+
 	var body: some View {
-		Color.blue
+		GeometryReader { reader in
+			ZStack {
+				let gradient = Gradient(colors: [.defaultThemeColorGradient2, .defaultThemeColor])
+				LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
+
+				VStack {
+					Image("logo")
+						.resizable()
+						.scaledToFit()
+						.frame(width: reader.size.width * 0.8, height: reader.size.height * 0.8)
+
+					if data.zeigeUhrzeit || data.zeigeDatum {
+						HStack(spacing: 20) {
+							Spacer()
+
+							if data.zeigeDatum {
+								Text(Date().formatted("dd.MMM.YYYY"))
+									.font(.system(size: 500))
+									.frame(height: reader.size.height * 0.1)
+									.minimumScaleFactor(0.01)
+							}
+
+							if data.zeigeUhrzeit {
+								Text(uhrzeit)
+									//.font(.largeTitle)
+									.font(.system(size: 500))
+									.frame(height: reader.size.height * 0.1)
+									.minimumScaleFactor(0.01)
+									.onReceive(timer) { _ in
+										uhrzeit = Date().formatted("HH:mm")
+									}
+							}
+
+							Spacer()
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
