@@ -35,6 +35,11 @@ protocol CueItem: Hashable, ObservableObject {
 class CueConfig: ObservableObject{
 	@Published var cues: [any CueItem] = [Cue_Logo(), Cue_Image(), Cue_Logo(), Cue_Logo()]
 	@Published var index: Int = 0
+
+	func insert(cue: any CueItem) {
+		cues.insert(contentsOf: [cue], at: index+1)
+		index += 1
+	}
 }
 
 struct CueConfigWrapper {

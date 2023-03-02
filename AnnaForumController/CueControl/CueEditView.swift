@@ -25,7 +25,10 @@ struct CueEditView: View {
 				}
 
 				HStack {
-					CueListView()
+					VStack {
+						CueListView()
+						NewCueView()
+					}
 						.frame(width: reader.size.width * 0.3)
 						.padding()
 					let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
