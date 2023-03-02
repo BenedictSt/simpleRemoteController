@@ -27,7 +27,6 @@ struct CueEditView: View {
 				CueListView()
 				let cueEditView = cueConfig.cues[safe: cueConfig.index]?.edit_view ?? AnyView(Color.gray)
 				cueEditView
-					.frame(width: 400, height: 200)
 			}
 		}
 	}

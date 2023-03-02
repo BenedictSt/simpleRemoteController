@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F0C29FE29B105880094B5A6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C29FD29B105880094B5A6 /* Options.swift */; };
+		8F0C2A0029B12BD30094B5A6 /* EditCueName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */; };
 		8F0E469D29AE8B700079271F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469C29AE8B700079271F /* LightView.swift */; };
 		8F0E469F29AE96A20079271F /* UnverbundenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */; };
 		8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485A4E29A7D07900C7DE0E /* x32.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		8F0C29FD29B105880094B5A6 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCueName.swift; sourceTree = "<group>"; };
 		8F0E469C29AE8B700079271F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverbundenOverlay.swift; sourceTree = "<group>"; };
 		8F485A4E29A7D07900C7DE0E /* x32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x32.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				8FA64D0F29AFB960004CE481 /* CueConfig.swift */,
 				8FA64D1229AFBBA2004CE481 /* LogoCue.swift */,
+				8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */,
 			);
 			path = Cue;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8F0E469D29AE8B700079271F /* LightView.swift in Sources */,
 				8F95146829A9452500B2DF33 /* PanicButton.swift in Sources */,
+				8F0C2A0029B12BD30094B5A6 /* EditCueName.swift in Sources */,
 				8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */,
 				8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,

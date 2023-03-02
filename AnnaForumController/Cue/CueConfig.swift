@@ -19,7 +19,7 @@ struct CueItemWrapper: Codable, Equatable {
 }
 
 
-protocol CueItem: Hashable {
+protocol CueItem: Hashable, ObservableObject {
 	var id: UUID { get }
 	var name: String {get set}
 	var type: CueType { get }
