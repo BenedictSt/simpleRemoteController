@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0C29FE29B105880094B5A6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C29FD29B105880094B5A6 /* Options.swift */; };
+		8F0C2A0029B12BD30094B5A6 /* EditCueName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */; };
+		8F0C2A0229B138BB0094B5A6 /* ImageCue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C2A0129B138BA0094B5A6 /* ImageCue.swift */; };
+		8F0C2A0429B13B630094B5A6 /* NewCueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C2A0329B13B630094B5A6 /* NewCueView.swift */; };
 		8F0E469D29AE8B700079271F /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469C29AE8B700079271F /* LightView.swift */; };
 		8F0E469F29AE96A20079271F /* UnverbundenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */; };
 		8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485A4E29A7D07900C7DE0E /* x32.swift */; };
@@ -16,6 +20,14 @@
 		8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146C29A94AF900B2DF33 /* ChannelView.swift */; };
 		8F95146F29A94E7500B2DF33 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95146E29A94E7500B2DF33 /* SettingsView.swift */; };
 		8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */; };
+		8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D0F29AFB960004CE481 /* CueConfig.swift */; };
+		8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1229AFBBA2004CE481 /* LogoCue.swift */; };
+		8FA64D1529AFE1B9004CE481 /* ExternalDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */; };
+		8FA64D1729AFE26A004CE481 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1629AFE26A004CE481 /* Extensions.swift */; };
+		8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1829AFE39A004CE481 /* CueControlView.swift */; };
+		8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1B29AFE5EB004CE481 /* CueListView.swift */; };
+		8FA64D1E29AFE831004CE481 /* CueControlTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */; };
+		8FA64D2029AFEEFF004CE481 /* CueEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */; };
 		8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */; };
 		8FB37F2229A428C10028B248 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB37F2129A428C10028B248 /* SoundView.swift */; };
 		8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC817D429A69CB0004B4F8A /* OSC_Server.swift */; };
@@ -30,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F0C29FD29B105880094B5A6 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCueName.swift; sourceTree = "<group>"; };
+		8F0C2A0129B138BA0094B5A6 /* ImageCue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCue.swift; sourceTree = "<group>"; };
+		8F0C2A0329B13B630094B5A6 /* NewCueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCueView.swift; sourceTree = "<group>"; };
 		8F0E469C29AE8B700079271F /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverbundenOverlay.swift; sourceTree = "<group>"; };
 		8F485A4E29A7D07900C7DE0E /* x32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x32.swift; sourceTree = "<group>"; };
@@ -38,6 +54,15 @@
 		8F95146C29A94AF900B2DF33 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		8F95146E29A94E7500B2DF33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusView.swift; sourceTree = "<group>"; };
+		8FA64D0E29AFAD12004CE481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA64D0F29AFB960004CE481 /* CueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueConfig.swift; sourceTree = "<group>"; };
+		8FA64D1229AFBBA2004CE481 /* LogoCue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCue.swift; sourceTree = "<group>"; };
+		8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayView.swift; sourceTree = "<group>"; };
+		8FA64D1629AFE26A004CE481 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8FA64D1829AFE39A004CE481 /* CueControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueControlView.swift; sourceTree = "<group>"; };
+		8FA64D1B29AFE5EB004CE481 /* CueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueListView.swift; sourceTree = "<group>"; };
+		8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueControlTopBar.swift; sourceTree = "<group>"; };
+		8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueEditView.swift; sourceTree = "<group>"; };
 		8FB1466629A41EC3003943B5 /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
 		8FB37F2129A428C10028B248 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		8FC817D429A69CB0004B4F8A /* OSC_Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSC_Server.swift; sourceTree = "<group>"; };
@@ -65,6 +90,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FA64D1129AFBB8E004CE481 /* Cue */ = {
+			isa = PBXGroup;
+			children = (
+				8FA64D0F29AFB960004CE481 /* CueConfig.swift */,
+				8F0C2A0129B138BA0094B5A6 /* ImageCue.swift */,
+				8FA64D1229AFBBA2004CE481 /* LogoCue.swift */,
+				8F0C29FF29B12BD30094B5A6 /* EditCueName.swift */,
+			);
+			path = Cue;
+			sourceTree = "<group>";
+		};
+		8FA64D1A29AFE554004CE481 /* CueControl */ = {
+			isa = PBXGroup;
+			children = (
+				8FA64D1829AFE39A004CE481 /* CueControlView.swift */,
+				8FA64D1B29AFE5EB004CE481 /* CueListView.swift */,
+				8FA64D1D29AFE831004CE481 /* CueControlTopBar.swift */,
+				8FA64D1F29AFEEFF004CE481 /* CueEditView.swift */,
+				8F0C2A0329B13B630094B5A6 /* NewCueView.swift */,
+			);
+			path = CueControl;
+			sourceTree = "<group>";
+		};
 		8FCC321029A3FDC400216060 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +133,9 @@
 		8FCC321B29A3FDC400216060 /* AnnaForumController */ = {
 			isa = PBXGroup;
 			children = (
+				8FA64D1A29AFE554004CE481 /* CueControl */,
+				8FA64D1129AFBB8E004CE481 /* Cue */,
+				8FA64D0E29AFAD12004CE481 /* Info.plist */,
 				8FCC321C29A3FDC400216060 /* AnnaForumControllerApp.swift */,
 				8FCC321E29A3FDC400216060 /* ContentView.swift */,
 				8FCC322029A3FDC500216060 /* Assets.xcassets */,
@@ -101,6 +152,9 @@
 				8F95147029A9684500B2DF33 /* ConnectionStatusView.swift */,
 				8F0E469C29AE8B700079271F /* LightView.swift */,
 				8F0E469E29AE96A20079271F /* UnverbundenOverlay.swift */,
+				8FA64D1429AFE1B9004CE481 /* ExternalDisplayView.swift */,
+				8FA64D1629AFE26A004CE481 /* Extensions.swift */,
+				8F0C29FD29B105880094B5A6 /* Options.swift */,
 			);
 			path = AnnaForumController;
 			sourceTree = "<group>";
@@ -195,18 +249,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC817D529A69CB0004B4F8A /* OSC_Server.swift in Sources */,
+				8FA64D1729AFE26A004CE481 /* Extensions.swift in Sources */,
 				8F0E469F29AE96A20079271F /* UnverbundenOverlay.swift in Sources */,
 				8F95146629A943C300B2DF33 /* floatDbTable.swift in Sources */,
+				8FA64D1529AFE1B9004CE481 /* ExternalDisplayView.swift in Sources */,
 				8FB1466729A41EC3003943B5 /* LocalNetworkPermission.swift in Sources */,
 				8F0E469D29AE8B700079271F /* LightView.swift in Sources */,
+				8F0C2A0229B138BB0094B5A6 /* ImageCue.swift in Sources */,
 				8F95146829A9452500B2DF33 /* PanicButton.swift in Sources */,
+				8F0C2A0029B12BD30094B5A6 /* EditCueName.swift in Sources */,
+				8FA64D1329AFBBA2004CE481 /* LogoCue.swift in Sources */,
 				8F95147129A9684500B2DF33 /* ConnectionStatusView.swift in Sources */,
 				8FC817D729A69CB8004B4F8A /* OSC_Client.swift in Sources */,
+				8FA64D1929AFE39A004CE481 /* CueControlView.swift in Sources */,
+				8FA64D1C29AFE5EB004CE481 /* CueListView.swift in Sources */,
 				8F485A4F29A7D07900C7DE0E /* x32.swift in Sources */,
+				8F0C29FE29B105880094B5A6 /* Options.swift in Sources */,
+				8F0C2A0429B13B630094B5A6 /* NewCueView.swift in Sources */,
+				8FA64D1029AFB960004CE481 /* CueConfig.swift in Sources */,
 				8FCC321F29A3FDC400216060 /* ContentView.swift in Sources */,
 				8FB37F2229A428C10028B248 /* SoundView.swift in Sources */,
+				8FA64D1E29AFE831004CE481 /* CueControlTopBar.swift in Sources */,
 				8F95146D29A94AF900B2DF33 /* ChannelView.swift in Sources */,
 				8FCC321D29A3FDC400216060 /* AnnaForumControllerApp.swift in Sources */,
+				8FA64D2029AFEEFF004CE481 /* CueEditView.swift in Sources */,
 				8F95146F29A94E7500B2DF33 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +402,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnnaForumController/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -346,7 +413,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -374,6 +441,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnnaForumController/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -384,7 +452,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
