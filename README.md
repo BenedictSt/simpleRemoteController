@@ -1,4 +1,4 @@
-# AnnaForumController
+# Simple x32 Remote Control
 
 Simple control of the x32 mixer via OSC.
 
